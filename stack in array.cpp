@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int main() {
     int stack[100],x,i=0,j,top,choice=1;
     while(1){
