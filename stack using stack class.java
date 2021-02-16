@@ -3,7 +3,7 @@ class Main {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);  
         Stack<Integer> stack= new Stack<>();
-        int x,i=0,j,top=0,choice=1;
+        int x,choice=1;
         while(true){
             System.out.println("\n1.push, 2.pop, 3.top, 4.print 0.exit\n");
             choice= sc.nextInt();

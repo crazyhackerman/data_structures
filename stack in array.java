@@ -37,7 +37,6 @@ public class Main {
                         else
                             System.out.println("stack is empty\n");
                         break;
-                    
                 case 0: System.exit(0);
                 default:System.out.println("Error! choice is not correct\n");
             }

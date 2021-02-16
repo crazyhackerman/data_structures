@@ -35,7 +35,6 @@ int main() {
                     else
                         cout<<"stack is empty\n";
                     break;
-                    
             case 0: exit(1);
             default:cout<<"Error! choice is not correct\n";
         }

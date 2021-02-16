@@ -34,7 +34,6 @@ int main() {
                     else
                         printf("stack is empty\n");
                     break;
-                    
             case 0: exit(1);
             default:printf("Error! choice is not correct\n");
         }
