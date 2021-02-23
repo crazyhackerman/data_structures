@@ -1,42 +1,43 @@
 #include <stdio.h>
 int main() {
-    int stack[100],x,i=0,j,top,choice=1;
+    int queue[100],x,i=0,j,front=1,rear=0,choice=1;
     while(1){
-        printf("\n1.enqueue, 2.dequeue, 3.top, 4.print 0.exit\n");
+        printf("\n1.enqueue, 2.dequeue, 3.front, 4.rear 5.print 0.exit\n");
         scanf("%d",&choice);
         switch(choice){
-            case 1: printf("Push:");
+            case 1: printf("enqueue:");
                     scanf("%d",&x);
-                    stack[i]=x;
-                    top=stack[i];
-                    i++;
+                    rear++;
+                    queue[rear] = x;
                     break;
-            case 2: if(i>=0){
-                        if(i>0)
-                            printf("Pop:%d\n",top);
-                        i--;
-                        if(i>0)
-                            top=stack[i-1];
+            case 2: if(front>=1){
+                        printf("dequeue:%d\n",queue[front]);
+                        front++;
                     }
                     else
-                        printf("stack is empty\n");
+                        printf("queue is empty\n");
                     break;
-            case 3: if(i>=0)
-                        printf("top:%d\n",top);
+            case 3: if(front>=1)
+                        printf("front:%d\n",queue[front]);
                     else
-                        printf("stack is empty\n");
+                        printf("queue is empty\n");
                     break;
-            case 4: printf("stack:");
-                    if(i>=0){
-                        for(j=0;j<i;j++)
-                            printf("%d,",stack[j]);
+            case 4: if(front>=1)
+                        printf("rear:%d\n",queue[rear]);
+                    else
+                        printf("queue is empty\n");
+                    break;
+            case 5: printf("queue:");
+                    if(front>=1){
+                        for(j=front;j<=rear;j++)
+                            printf("%d,",queue[j]);
                     }
                     else
-                        printf("stack is empty\n");
+                        printf("queue is empty\n");
                     break;
             case 0: exit(1);
             default:printf("Error! choice is not correct\n");
         }
     }
-	return 0;
+    return 0;
 }
